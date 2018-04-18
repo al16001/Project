@@ -1,0 +1,55 @@
+body {
+  background-image:url("../images/chequered.jpg");
+  background-size:cover;
+  background-position: center;
+  margin:auto;
+}
+.content {
+  margin-top: 50px;
+  margin-bottom:50px;
+  z-index:1;
+}
+header {
+  margin-top: -60px;
+  width: 100%;
+  position: fixed;
+  text-align:center;
+  background: rgba(1, 1, 1, 0.75);
+  background-size:cover;
+  z-index:2;
+  font-size:16px;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  text-align:center;
+  background: rgba(1, 1, 1, 0.75);
+  background-size:cover;
+  z-index:2;
+}
+.links{
+  padding:10px;
+}
+li {
+  float: left;
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+.foot {
+    float:right;
+    font-size: 12px;
+}
+.img2 {
+  float: right;
+  width: 200px;
+}
+a {
+  color: white;
+}
+b {
+  color: #d20;
+}
+c {
+  color: grey;
+}

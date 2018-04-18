@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Title</title>
+    <link REL="StyleSheet" TYPE="text/css" HREF="CSS/stylesheet1.css">
+    <style>
+      #parent {
+        display: flex;
+        position:static;
+      }
+      #narrow {
+        max-width: 400px;
+        background: black;
+        /* Just so it's visible */
+      }
+      #map {
+        flex: 1;
+        /* Grow to rest of container */
+        background: lightgreen;
+        /* Just so it's visible */
+        height: inherit;
+        width: 100%;
+       }
+       .light {
+         background: lightblue;
+       }
+       .dark {
+         background: #77f;
+       }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="links">
+        <img src="images/brisca.png" class="img2"/>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="team.html">About the Team</a></li>
+          <li><a href="thecar.html">The Stockcar</a></li>
+          <li><a href="sponsorship.html">Sponsorship</a></li>
+          <li><b href="fixtures.html">Fixtures</b></li>
+        </ul>
+      </div>
+    </header>
+    <footer>
+      <ul class="foot">
+        <li><a href="contact.html">Contact</a></li>
+        <li><c> Published by Abbie Lund; Last edited April 2018</c></li>
+      </ul>
+    </footer>
+    <div class="content">
+      <div id="parent">
+      <div id="narrow">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="dark">
+              <th>Day</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Track</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+            <tbody>
+              <tr class="light">
+              <td>Sat</td>
+              <td>14/04/2018</td>
+              <td>6.00pm</td>
+              <td>Birmingham</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>15/04/2018</td>
+              <td>1.30pm</td>
+              <td>Hednesford</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>22/04/2018</td>
+              <td>12.30pm</td>
+              <td>Sheffield</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>28/04/2018</td>
+              <td>5.30pm</td>
+              <td>Kings Lynn</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Mon</td>
+              <td>07/05/2018</td>
+              <td>4.00pm</td>
+              <td>Belle Vue</td>
+              <td></td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>12/05/2018</td>
+              <td>6.00pm</td>
+              <td>Skegness</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>13/05/2018</td>
+              <td>12noon</td>
+              <td>Skegness</td>
+              <td>UK Open</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>19/05/2018</td>
+              <td>5.30pm</td>
+              <td>Kings Lynn</td>
+              <td></td>
+              </tr>
+              <tr class="light">
+              <td>Mon</td>
+              <td>28/05/2018</td>
+              <td>4.00pm</td>
+              <td>Belle Vue</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>03/06/2018</td>
+              <td>1.00pm</td>
+              <td>Buxton</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>16/06/2018</td>
+              <td>5.00pm</td>
+              <td>Cowdenbeath</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>17/06/2018</td>
+              <td>12.30pm</td>
+              <td>Lochgelly</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>23/06/2018</td>
+              <td>6.45pm</td>
+              <td>Ipswich</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>24/06/2018</td>
+              <td>1.00pm</td>
+              <td>Northampton</td>
+              <td>WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>01/07/2018</td>
+              <td>3.30pm</td>
+              <td>Belle Vue</td>
+              <td>British</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>14/07/2018</td>
+              <td>5.00pm</td>
+              <td>Skegness</td>
+              <td></td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>15/07/2018</td>
+              <td>12noon</td>
+              <td>Skegness</td>
+              <td></td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>28/07/2018</td>
+              <td>5.00pm</td>
+              <td>Northampton</td>
+              <td></td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>29/07/2018</td>
+              <td>12noon</td>
+              <td>Northampton</td>
+              <td>European</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>04/08/2018</td>
+              <td>5.00pm</td>
+              <td>Kings Lynn</td>
+              <td>WCSF</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>11/08/2018</td>
+              <td>6.00pm</td>
+              <td>Birmingham</td>
+              <td>WCSF</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>18/08/2018</td>
+              <td>12noon</td>
+              <td>Venray</td>
+              <td></td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>19/08/2018</td>
+              <td>12noon</td>
+              <td>Venray</td>
+              <td>World Cup</td>
+              </tr>
+              <tr class="dark">
+              <td>Mon</td>
+              <td>27/08/2018</td>
+              <td>4.00pm</td>
+              <td>Belle Vue</td>
+              <td>Shoot Out Rd 1</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>01/09/2018</td>
+              <td>6.00pm</td>
+              <td>Birmingham</td>
+              <td></td>
+              </tr>
+              <tr class="dark">
+              <td>Fri</td>
+              <td>14/09/2018</td>
+              <td>7.30pm</td>
+              <td>Skegness</td>
+              <td>Overseas</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>15/09/2018</td>
+              <td>5.30pm</td>
+              <td>Skegness</td>
+              <td>World Final</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>16/09/2018</td>
+              <td>12noon</td>
+              <td>Northampton</td>
+              <td>World Masters</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>22/09/2018</td>
+              <td>5.30pm</td>
+              <td>Kings Lynn</td>
+              <td>Shoot Out Rd 2</td>
+              </tr>
+              <tr class="dark">
+              <td>Sun</td>
+              <td>30/09/2018</td>
+              <td>1.00pm</td>
+              <td>Buxton</td>
+              <td>Shoot Out Rd 3 / WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>07/10/2018</td>
+              <td>12.30pm</td>
+              <td>Sheffield</td>
+              <td>Shoot Out Rd 4 / WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>13/10/2018</td>
+              <td>6.00pm</td>
+              <td>Skegness</td>
+              <td>Shoot Out Rd 5 / WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sat</td>
+              <td>20/10/2018</td>
+              <td>5.30pm</td>
+              <td>Kings Lynn</td>
+              <td>Shoot Out Rd 6 / WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>27/10/2018</td>
+              <td>6.00pm</td>
+              <td>Birmingham</td>
+              <td>Shoot Out Rd 7 / WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>28/10/2018</td>
+              <td>1.00pm</td>
+              <td>Northampton</td>
+              <td>Shoot Out Rd 8 / WCQR</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>03/11/2018</td>
+              <td>5.00pm</td>
+              <td>Stoke</td>
+              <td>Shoot Out Rd 9 / WCQR</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>11/11/2018</td>
+              <td>3.30pm</td>
+              <td>Belle Vue</td>
+              <td>Shoot Out Finale</td>
+              </tr>
+              <tr class="dark">
+              <td>Sat</td>
+              <td>17/11/2018</td>
+              <td>5.00pm</td>
+              <td>Birmingham</td>
+              <td>Gala Night</td>
+              </tr>
+              <tr class="light">
+              <td>Sun</td>
+              <td>30/12/2018</td>
+              <td>12.30pm</td>
+              <td>Stoke</td>
+              <td></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div id="map">
+      </div>
+      </div>
+      <script>
+        function initMap() {
+          var Birmingham = {lat: 52.28534, lng: -1.51459};
+          var Hednesford = {lat: 52.709210, lng: -1.975498};
+          var Skegness = {lat: 53.186445, lng: 0.282941};
+          var Northampton = {lat: 52.197893, lng: -0.802966};
+          var Buxton = {lat: 53.220790, lng: -1.916351};
+          var Sheffield = {lat: 53.406138, lng: -1.492449};
+          var KingsLynn = {lat: 52.730154, lng: 0.389113};
+          var BelleVue = {lat: 53.461584, lng: -2.184686};
+          var Venray = {lat: 51.521916, lng: 5.876433};
+          var Cowdenbeath = {lat: 56.109369, lng: -3.347174};
+          var Lochgelly = {lat:56.126877, lng: -3.281659};
+          var Ipswich = {lat: 52.055460, lng: 1.224604};
+          var Stoke = {lat: 53.031607, lng: -2.258181};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            center: Birmingham
+          });
+          var contentString1 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Birmingham</h1>'+
+            '<div id="bodyContent">' +
+              '<p><b>Birmingham Wheels</b>, With its wide turns and long, fast straights the track is widely ' +
+              'regarded as one of the finest for Banger and Stock Car action around today, ' +
+              'and every meeting features a buzzing and friendly atmosphere no matter what ' +
+              'the formulas.</p>' +
+
+             '<p>Birmingham Wheels Raceway is located just off Landor Street in the Bordesley Green ' +
+              'area close to Birmingham City FC, and is easily accessible from the M6 and A38. ' +
+              'Duddeston and Adderley Park railway stations are also close by. The track features ' +
+              'terracing with great viewing on the home straight and both turns, plus catering ' +
+              'facilities and various other trade stands.</p>'+
+              '<p>Attribution: Birmingham Wheels Raceway <a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Birmingham</a> '+
+              '(last visited April 18, 2018).</p>'+
+            '</div>'+
+          '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString1
+          });
+
+          var marker1 = new google.maps.Marker({
+            position: Birmingham,
+            map: map,
+            title: 'Birmingham Wheels Raceway'
+          });
+          marker1.addListener('click', function() {
+            infowindow.open(map, marker1);
+          });
+
+          var contentString2 = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Hednesford</h1>'+
+            '<div id="bodyContent">' +
+              '<p><b>Hednesford Hills Raceway</b>, has over 50 years of motorsport history and is the '+
+              'fastest quarter-mile oval in Europe, with the speeds many cars achieve around its '+
+              ' fearsome steeply banked turns really having to be seen to be believed!'+
+
+              'The track is situated high on Cannock Chase just one mile from the town of Hednesford '+
+              ' in Staffordshire, and is easily accessible from the M6, M6 Toll and A5.' +
+
+              '<p>Attribution: Hednesford Hills Raceway <a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Hednesford</a> '+
+              '(last visited April 18, 2018).</p>'+
+            '</div>'+
+          '</div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString2
+          });
+
+          var marker2 = new google.maps.Marker({
+            position: Hednesford,
+            map: map,
+            title: 'Hednesford Hills Raceway'
+          });
+          marker2.addListener('click', function() {
+            infowindow.open(map, marker2);
+          });
+
+          var marker3 = new google.maps.Marker({
+            position: Skegness,
+            map: map
+          });
+          var marker4 = new google.maps.Marker({
+            position: Northampton,
+            map: map
+          });
+          var marker5 = new google.maps.Marker({
+            position: Buxton,
+            map: map
+          });
+          var marker6 = new google.maps.Marker({
+            position: Sheffield,
+            map: map
+          });
+          var marker7 = new google.maps.Marker({
+            position: KingsLynn,
+            map: map
+          });
+          var marker8 = new google.maps.Marker({
+            position: BelleVue,
+            map: map
+          });
+          var marker9 = new google.maps.Marker({
+            position: Venray,
+            map: map
+          });
+          var marker10 = new google.maps.Marker({
+            position: Cowdenbeath,
+            map: map
+          });
+          var marker11 = new google.maps.Marker({
+            position: Lochgelly,
+            map: map
+          });
+          var marker12 = new google.maps.Marker({
+            position: Ipswich,
+            map: map
+          });
+          var marker13 = new google.maps.Marker({
+            position: Stoke,
+            map: map
+          });
+        };
+      </script>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATWig6Sp2xxFxBvvMSNafbjDR6-CLG2Fs&callback=initMap"
+    type="text/javascript"></script>
+  </div>
+  </body>
+</html>
