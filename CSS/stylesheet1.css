@@ -90,6 +90,7 @@ table {
 }
 .info {
   float:right;
+  max-width: 100%;
 }
 
 .fa {

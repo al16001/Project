@@ -10,7 +10,8 @@
   padding: 8px;
 }
 .storypic {
-  height: 100%;
+  max-height: 100%;
+  position: relative;
   width: 100%;
   border-radius: 20px;
 }
