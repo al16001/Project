@@ -2,43 +2,39 @@
 <html>
   <head>
     <title>Document Title</title>
-    <link REL="StyleSheet" TYPE="text/css" HREF="CSS/stylesheet1.css">
+    <link REL="StyleSheet" TYPE="text/css" HREF="../CSS/stylesheet1.css">
     <style>
-    #parent {
-      display: flex;
-      position:static;
-    }
-    #narrow {
-      max-width: 500px;
-      /* Just so it's visible */
-    }
+      #parent {
+        display: flex;
+        position:static;
+      }
+      #narrow {
+        max-width: 400px;
+        background: black;
+        /* Just so it's visible */
+      }
       #map {
         flex: 1;
         /* Grow to rest of container */
+        background: lightgreen;
         /* Just so it's visible */
         height: inherit;
         width: 100%;
        }
        .light {
-        background: rgba(1, 1, 1, 0.65);
+         background: lightblue;
        }
        .dark {
-        background: rgba(1, 1, 1, 0.85);
-       }
-       thead {
-         color:white;
-       }
-       tbody {
-         color:white;
+         background: #77f;
        }
     </style>
   </head>
   <body>
     <header>
       <div class="links">
-        <img src="images/brisca.png" class="img2"/>
+        <img src="../images/brisca.png" class="img2"/>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="main.html">Home</a></li>
           <li><a href="team.html">About the Team</a></li>
           <li><a href="thecar.html">The Stockcar</a></li>
           <li><a href="sponsorship.html">Sponsorship</a></li>
@@ -379,21 +375,22 @@
               'Duddeston and Adderley Park railway stations are also close by. The track features ' +
               'terracing with great viewing on the home straight and both turns, plus catering ' +
               'facilities and various other trade stands.</p>'+
-              '<p><a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Birmingham">Attribution: Birmingham Wheels Raceway</a> '+
+              '<p>Attribution: Birmingham Wheels Raceway <a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Birmingham</a> '+
               '(last visited April 18, 2018).</p>'+
             '</div>'+
           '</div>';
 
-          var infowindow1 = new google.maps.InfoWindow({
-              content: contentString1,
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString1
           });
+
           var marker1 = new google.maps.Marker({
             position: Birmingham,
             map: map,
             title: 'Birmingham Wheels Raceway'
           });
           marker1.addListener('click', function() {
-            infowindow1.open(map, marker1);
+            infowindow.open(map, marker1);
           });
 
           var contentString2 = '<div id="content">'+
@@ -408,12 +405,12 @@
               'The track is situated high on Cannock Chase just one mile from the town of Hednesford '+
               ' in Staffordshire, and is easily accessible from the M6, M6 Toll and A5.' +
 
-              '<p><a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Hednesford">Attribution: Hednesford Hills Raceway</a> '+
+              '<p>Attribution: Hednesford Hills Raceway <a href="http://www.spedeworth.co.uk/incarace/venue.php?name=Hednesford</a> '+
               '(last visited April 18, 2018).</p>'+
             '</div>'+
           '</div>';
 
-          var infowindow2 = new google.maps.InfoWindow({
+          var infowindow = new google.maps.InfoWindow({
             content: contentString2
           });
 
@@ -423,7 +420,7 @@
             title: 'Hednesford Hills Raceway'
           });
           marker2.addListener('click', function() {
-            infowindow2.open(map, marker2);
+            infowindow.open(map, marker2);
           });
 
           var marker3 = new google.maps.Marker({

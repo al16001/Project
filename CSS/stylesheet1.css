@@ -1,13 +1,28 @@
+article {
+  padding: 10px;
+}
+
 body {
   background-image:url("../images/chequered.jpg");
   background-size:cover;
   background-position: center;
   margin:auto;
 }
+form {
+  float: left;
+  padding: 10px;
+}
+.name {
+  width: 100%;
+  text-align:center;
+  overflow: auto;
+  background: rgba(1, 1, 1, 0.75);
+  background-size:cover;
+}
 .content {
   margin-top: 50px;
   margin-bottom:50px;
-  z-index:1;
+  z-index:2;
 }
 header {
   margin-top: -60px;
@@ -17,7 +32,7 @@ header {
   background: rgba(1, 1, 1, 0.75);
   background-size:cover;
   z-index:2;
-  font-size:16px;
+  font-size:20px;
 }
 footer {
   width: 100%;
@@ -30,6 +45,9 @@ footer {
 }
 .links{
   padding:10px;
+}
+li:hover {
+  opacity: 0.7
 }
 li {
   float: left;
@@ -44,6 +62,14 @@ li {
   float: right;
   width: 200px;
 }
+
+.gm-style-iw {
+  top: 0 !important;
+  left: 0 !important;
+  background: rgba(1, 1, 1, 0.75);
+  padding-left: 30px;
+  padding-top: 15px;
+}
 a {
   color: white;
 }
@@ -52,4 +78,54 @@ b {
 }
 c {
   color: grey;
+}
+h2 {
+  color: white;
+}
+p {
+  color: white;
+}
+table {
+  color:white;
+}
+.info {
+  float:right;
+}
+
+.fa {
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    z-index:2;
+    border: 4px solid white;
+    border-radius: 20px;
+}
+.fa2 {
+    font-size: 30px;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    z-index:2;
+    border: 4px solid white;
+    border-radius: 20px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.media {
+  float:right;
+  display: block;
+  padding: 10px;
 }
