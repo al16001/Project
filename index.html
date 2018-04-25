@@ -1,13 +1,112 @@
 <!DOCTYPE html>
 <head>
-  <title>Document Title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Home</title>
   <link REL="StyleSheet" TYPE="text/css" HREF="CSS/stylesheet1.css">
   <link REL="StyleSheet" TYPE="text/css" HREF="CSS/stylesheetindex.css">
   <link REL="StyleSheet" TYPE="text/css" HREF="CSS/stylesheetstories.css">
+  <script src="javascript/java.js"></script>
   <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta property="og:url"           content="https://al16001.github.io/Project.html" />
+<meta property="og:type"          content="article" />
+<meta property="og:title"         content="Your Website Title" />
+<meta property="og:description"   content="Your description" />
+<meta property="og:image"         content="https://al16001.github.io/Project/images/win.jpg" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  position:relative;
+  top:-70px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index:3;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
 </head>
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <header>
     <div class="links">
       <img src="images/brisca.png" class="img2"/>
@@ -27,7 +126,72 @@
     </ul>
   </footer>
   <div class="content">
-    <img src="images/stockcar.jpg" class="img1"/>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/stockcar.jpg" class="img1">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/flying.jpg" class="img1">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/stockcars.jpg" class="img1">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/child.jpg" class="img1">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/win.jpg" class="img1">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="content2">
     <div class="name">
       <h1>GEORGE ELWELL
          #501
@@ -43,53 +207,117 @@
       </div>
     </div>
     <div class="stories">
+      <div class="mySlides fade">
+        <img src="images/flying.jpg" class="post1">
+      </div>
       <div class="post1">
         <article>
-          <h2>VHS umami pop-up trust fund</h2>
-          <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
-          <button>like</button>
+          <h2>BriSCA F1 The Future</h2>
+          <p>2017 has seen a considerable amount of change within BriSCA Formula 1 which was always inevitable in particular with track closures and other issues that arise during the normal course of a season. 2017 has in some ways created a 'perfect storm' after quite a buoyant and lengthy period of stability. We now need to get a grip TOGETHER to ensure we become stronger and healthier in 2018.
+
+</p><p>We also need to 'move' the agenda particularly social media wise into positive territory and as far as 2018 and onwards are concerned, we are all only interested in moving the sport forwards. That should start now, wipe the slate clean.
+
+</p><p>After a difficult few weeks, Deane Wood and myself have jointly agreed to participate in a forum with 3 nominated 'fans' - the medium as has yet to be determined, perhaps one of the 'online' podcast broadcasts may well be an option. We may also include and invite the BSCDA Chairman who can answer driver related questions. Let's get things in the open in a positive manner.
+
+</p><p>We are prepared for a 60 -90 minute maximum 'open and constructive debate' to answer as honestly as possible many of the questions fans and drivers may or always wanted to ask and, where possible every effort will be made for honest answers and more importantly share 'ideas' openly which may well have merit to incorporate in a master plan, or indeed answer why an individual idea may well be impractical.
+
+</p><p>This currently is an 'embryonic' idea which needs more meat on the bone, I would be suggesting Stoxnet may nominate 3 sensible people to represent fans and collate from others questions and more importantly suggestions.
+The timing of this would possible be end of October to undertake it properly and Deane is also out of the country for a period next month, but it doesn't want rushing.
+
+</p><p>We are honest in our intent because we all recognise the future of BriSCA F1 is important and more than ever we need drivers,promoters and fans equally and to be engaged and to assist in ideas into 'Project 2018' putting the 'smile' back into BriSCA F1. Social media has hurt the sport this year in many ways, some understandable disappointment, some frustration, and much passion but far too much unfounded negative rhetoric.
+We will not be able to agree on anything however we want to end 2017 on a positive note with a 'fresh' view on 2018 and beyond. The draft 2017 fixtures have been announced, as is usual, the final and confirmed list comes in December and with ideas already taken on board, some of these may well reflect in the final version in terms of ideas.
+
+</p><p>We have all suffered a drip,drip of depression which has engulfed us this year and overshadowed actually the core values which remain strong. This is a genuine initiative for us all to embrace and draw a line and move on - and dispel the many rumours circulating.
+
+</p><p>Let's see where this runs,
+
+</p><p>Over to you
+
+Steve Rees BriSCA Chairman, Deane Wood, Anthony Flanagan BSCDA Chairman</p>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
         </article>
       </div>
       <div class="post1">
         <article>
-          <h2>VHS umami pop-up trust fund</h2>
-          <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
-          <button>like</button>
+          <h2>Rev Limit Specification</h2>
+          <p>Due to this 7000rpm Rev limit coming in I can't see how I'm going to be competitive with my '406'.
+The reason this Rev limit was proposed was to lower the overall noise of the cars, now I hear it's to reduce cost, stop people spending thousands on engines and to increase longevity, I've run my second hand engine for two and a half year over the 7000 limit to which I've had no major engine issues, a regimented maintenance schedule is the only work that's been done to the engine.
+When it was voted for to which I had a vote we were told that it was to Enforce a noise reduction, the mention of silencers was suggested but quickly shot down and no more discussion was had.
+If there is a noise problem I'd of happily had silencers made to satisfy.
+Unfortunately I can't see any other option but to pack up if this rule is passed.
+George Elwell</p>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
         </article>
       </div>
       <div class="post1">
         <article>
-          <h2>VHS umami pop-up trust fund</h2>
-          <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
-          <button>like</button>
+          <h2>BMB Statement</h2>
+          <p>Since the BSCDA AGM took place in November 2017 the BMB have been working on finding the correct route to take to police the 7,500rpm rev limit that was voted by the drivers. The BMB have enlisted the help of Murray Harrison and Ian Bennett as consultants to assist with this task.
+
+</p><p>It is very simple to introduce a rule however the issues arise when the BMB have to construct a policing policy, this is paramount. If the BMB cannot enforce this rule it is not an avenue the BMB can take as it becomes an impossible task which then creates friction for everyone involved.
+
+</p><p>Over the past few months a new MSD box – MSD 6CT (#6427) has been introduced on the market. This is a sealed unit and if the seal is broken the unit is scrap. The BMB have waited for this unit to become available so further testing could take place. Consultant Ian Bennett has spent many hours looking into this particular box and after a lengthy meeting the BMB have decided that this unit is, without question, the path BriSCA F1 drivers must take as it is 99% foolproof. This unit will be fitted to cars for a minimum of 3 years. The current price of this unit is £416 (incl VAT).
+
+</p><p>Many other options have been considered however after extensive research and discussion at present all other systems are flawed with loopholes and cheat options.
+
+</p><p>As the work behind the scenes has taken longer than anyone may have wanted, the BMB completely understand that to ask every driver to purchase this unit for their first meeting of the season, at such short notice, is highly unfair. Therefore the BMB have made the decision to ask the drivers if they would like to defer this until the 1st January 2019 or introduce this unit to all cars by the 1st June 2018.
+
+</p><p>Every licensed driver throughout 2017 and any new drivers for 2018 will be contacted via text on Tuesday 7th March. We request that you reply with your preferred choice. If you do not reply the BMB will assume you are happy for this unit to be introduced to all cars by the 1st June 2018. The deadline for all text replies is 6pm Thursday 8th March. </p>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
         </article>
       </div>
       <div class="post1">
         <article>
-          <h2>Sartorial synth Echo Park, roof party</h2>
-          <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
-          <button>like</button>
+          <h2>2018 BriSCA F1 Preview</h2>
+          <p>With just weeks now to go the 2018 BriSCA F1 season is about to get under 'Starters orders' - Following the shock loss of Coventry exactly a year ago, the sport is working hard to ameliorate the loss of this iconic and traditional venue.
+The Coventry management remain extremely active in pursuing opportunities for a replacement venue and whilst any chance of a return to Brandon looks exhausted Coventry Racing Club remain upbeat with regard securing a suitable location for the sport in the coming years.
+
+</p><p>But, it's business as usual with a sensibly constructed fixture programme and gentle but not radical change as the organisation moves the sport forward by evolution into a new era.
+
+</p><p>For 2018 we welcome Mildenhall back into the fold, it has been many years since the sport took place at the Suffolk venue however, with a change of ownership in the last 18 months and a huge renovation programme, this is rapidly becoming a first class venue and and a valuable shale surfaced addition debuting in April with a World Qualifying Round as a trial event.
+Spedeworth / Incarace have also been innovative in announcing an experiment designed to re invigorate the European Championship's with a complete revamp that will from a novelty perspective see the iconic Northampton tarmac raceway converted to shale as a trial for a period that includes the Euro weekend and understandably that has created quite a stir! The Mildands' is again well served with a regular programme also at Birmingham Wheels and the classic, again one off, at Hednesford Hills where the sheer power 'blows your socks off'!
+Spedeworth are also considering Aldershot for a trial in 2019. Northampton also hosts the second 2018 World Semi Final in August and Spedeworth's jewel in the crown, Ipswich returns with it's one off Thunder 500 in June!
+Elsewhere, Startrax & Spedeworth return to Cowdenbeath and Lochgelly for the bi annual Scottish Championship mid June, always a must do must see weekend with the High Octane Saturday Night thunder of the Racewall and the unique atmosphere it provides followed by a traditional Sunday afternoon at the well appointed Lochgelly Raceway.
+
+</p><p>Skegness hosts the 2018 World Final and the promotion, now in it's second year under the stewardship of former World Champion Rob Speak has again over the Winter seen further investment as the Lincolnshire venue enters of a new era and demonstrates confidence in the sport.
+
+</p><p>In Norfolk, the acclaimed King's Lynn raceway continues where it left off with a full season of events including the World Semi as a prelude to it hosting the 2019 World Final.
+
+</p><p>The North is well serviced with a a total of 13 events, 2 major events 'In the Hills' at Buxton with the September date a rare National Series round which shows promise. Belle Vue, Sheffield and Stoke provide the traditional shale action with a major five figure re vamp of the track surface over the Winter and the venue hosts the 2018 British in July as well as the end of season National Series Finales for both BriSCA F1 and BriSCA F2 in November which provided an electrifying conclusion to the official 20187 season.
+
+</p><p>The BSCDA [ Drivers Association ] and Promoters Association BriSCA have been working closely, particularly over the last 6 months, to map out a plan for the future. Rule changes implemented during the Winter include the introduction of an RPM limit of 7500 within an ongoing mantra of trying to reduce racer costs together with the whole sport becoming more customer focused and changes to back axle widths have also been brought in to control width and ensure that we maintain the contact and spectacle element of the sport. The other main change has been to the tyre permitted on the back inside of the car, again to improve spectacle, improve availability and hopefully reduce overall racer costs.
+
+</p><p>As always, the sport evolves and one or two drivers have announced retirement however, there is encouragement with a number of new registrations - and other top drivers promising additional commitment in 2018.
+
+</p><p>BriSCA and BSCDA are also experimenting in getting the sport off to a good start by introducing for the March events two Wild Card meetings which predominantely means Double Points in an attempt to attract more drivers out on track earlier!
+
+</p><p>So here we go, from a Heritage dating back to 1954 where everyone predicted the sport to be a '7 day wonder' BriSCA F1 - The Big League prepares for those immortal words 'gentlemen, start your engines as we enter season 65!
+Across the seven decades the sport has endured many 'shockwaves' yet the culture, colour, drama and adrenalin remains an enigma that is why BriSCA F1 Stock Car Racing remains a passionate and vibrant sport.
+
+</p><p>Let battle begin - Sunday March 18th at Manchester's Belle Vue followed by Saturday March 24th at the Norfolk Arena where the green flag will drop on the 2018 season in earnest!</p>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         </article>
       </div>
       <div class="post2">
         <article>
           <h2>Forage food truck keytar master cleanse</h2>
           <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
-          <button>like</button>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         </article>
       </div>
       <div class="post2">
         <article>
           <h2>Forage food truck keytar master cleanse</h2>
           <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
-          <button>like</button>
+          <div class="fb-share-button" data-href="https://al16001.github.io/Project/team.html" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fal16001.github.io%2FProject%2Fteam.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
         </article>
       </div>
     </div>
-    <script>
-      $("button").on("click", function() {
-        alert("clicked!")
-      });
-    </script>
+    <!-- Load Facebook SDK for JavaScript -->
+
     </div>
+  </div>
 </body>
